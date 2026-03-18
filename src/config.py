@@ -13,6 +13,8 @@ class Settings(BaseSettings):
     postgres_user: str = "anomaly"
     postgres_password: str = "anomaly123"
 
+    database_url: str
+
     class Config:
         env_file = ".env"
         extra = "ignore"
