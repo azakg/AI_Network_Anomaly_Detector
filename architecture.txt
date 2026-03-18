@@ -1,0 +1,56 @@
+ai-network-anomaly-detector/
+├── README.md
+├── .env.example
+├── docker-compose.yml
+├── requirements.txt
+├── alembic.ini
+├── migrations/
+├── docs/
+│   ├── architecture.md
+│   ├── api.md
+│   ├── prompts.md
+│   └── datasets.md
+├── sample_data/
+│   ├── zeek/
+│   │   ├── conn.log
+│   │   └── dns.log
+│   └── anomalies_expected.json
+├── src/
+│   ├── main.py
+│   ├── config.py
+│   ├── db/
+│   │   ├── base.py
+│   │   ├── session.py
+│   │   └── models.py
+│   ├── schemas/
+│   │   ├── event.py
+│   │   ├── anomaly.py
+│   │   └── explanation.py
+│   ├── ingestion/
+│   │   ├── zeek_conn_parser.py
+│   │   ├── zeek_dns_parser.py
+│   │   └── loader.py
+│   ├── processing/
+│   │   ├── normalizer.py
+│   │   ├── feature_engineering.py
+│   │   └── baselines.py
+│   ├── detection/
+│   │   ├── dns_spike.py
+│   │   ├── port_scan.py
+│   │   ├── connection_burst.py
+│   │   └── orchestrator.py
+│   ├── ai/
+│   │   ├── bedrock_client.py
+│   │   ├── prompt_builder.py
+│   │   └── explainer.py
+│   ├── api/
+│   │   ├── routes_health.py
+│   │   ├── routes_ingestion.py
+│   │   ├── routes_anomalies.py
+│   │   └── routes_explanations.py
+│   └── dashboard/
+│       └── streamlit_app.py
+└── tests/
+    ├── test_parsers.py
+    ├── test_detectors.py
+    └── test_api.py
