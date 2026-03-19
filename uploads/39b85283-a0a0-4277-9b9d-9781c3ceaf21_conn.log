@@ -1,0 +1,10 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	conn
+#open	2026-03-18-12-00-00
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes
+#types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count
+1710763200.123456	C1	10.0.0.5	51514	8.8.8.8	53	udp	dns	0.012	62	120	SF	-	-	0	D	1	90	1	148
+1710763201.123456	C2	10.0.0.8	49822	1.1.1.1	443	tcp	ssl	1.245	350	1024	SF	-	-	0	ShADadFf	8	780	10	1400
